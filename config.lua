@@ -28,10 +28,3 @@ DGCORE.Config.Client = {
     inventory_auto_sort = "dgbr_inventory_auto_sort",                                   -- インベントリー自動並び替え string(None / Kind / Get)
 }
 
-if not IsDuplicityVersion() then
-    function DGCORE.Config.Server.Set(config)
-        if config and type(config) == "table" then
-            DGCORE.Config.Server = config
-        end
-    end
-end

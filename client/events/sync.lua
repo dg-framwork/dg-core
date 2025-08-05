@@ -1,7 +1,7 @@
 RegisterNetEvent(DGCORE.Events.Client.Sync.Config)
 AddEventHandler(DGCORE.Events.Client.Sync.Config, function (data)
     if not data then return end
-    DGCORE.Config.Server.Set(data)
+    DGCORE.Config.Server = data
 end)
 
 RegisterNetEvent(DGCORE.Events.Client.Sync.User)

@@ -58,7 +58,7 @@ function Debug() {
     const [items, setItems] = useState<Item[] | null>(null);
 
     const handleRefresh = () => {
-        fetch(`https://${GetParentResourceName()}/refreshDebug`, {
+        fetch(`https://${GetParentResourceName()}/DGCORE:Client:UI:Debug:Refresh`, {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify({}),

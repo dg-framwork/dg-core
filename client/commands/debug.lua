@@ -9,6 +9,7 @@ RegisterCommand(DGCORE.Commands.Client.Debug.Show, function (_, _, _)
 end)
 
 RegisterCommand(DGCORE.Commands.Client.Debug.Hide, function (_, _, _)
+    SetNuiFocus(false, false)
     DGCORE.Client.UI.Debug.Hide()
 end)
 

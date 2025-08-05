@@ -26,5 +26,35 @@ DGCORE.Events.Server = {
         Request = "DGCORE:Server:Sync:Request",
         RequestConfig = "DGCORE:Server:Sync:RequestConfig",
         RequestUser = "DGCORE:Server:Sync:RequestUser"
-    }
+    },
+    Config = {
+        Closed = {
+            get = "DGCORE:Server:Config:Closed:get",
+            update = "DGCORE:Server:Config:Closed:update",
+        },
+        Whitelist = {
+            get = "DGCORE:Server:Config:Whitelist:get",
+            update = "DGCORE:Server:Config:Whitelist:update",
+        },
+        Redis = {
+            get = "DGCORE:Server:Config:Redis:get",
+            update = "DGCORE:Server:Config:Redis:update",
+        },
+        ChunkSize = {
+            get = "DGCORE:Server:Config:ChunkSize:get",
+            update = "DGCORE:Server:Config:ChunkSize:update",
+        },
+        UseAsyncQuery = {
+            get = "DGCORE:Server:Config:UseAsyncQuery:get",
+            update = "DGCORE:Server:Config:UseAsyncQuery:update",
+        },
+        MaxQueries = {
+            get = "DGCORE:Server:Config:MaxQueries:get",
+            update = "DGCORE:Server:Config:MaxQueries:update",
+        },
+        Debug = {
+            get = "DGCORE:Server:Config:Debug:get",
+            update = "DGCORE:Server:Config:Debug:update",
+        },
+    },
 }

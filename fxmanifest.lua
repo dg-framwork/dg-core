@@ -33,6 +33,7 @@ server_scripts {
     'server/database/*.lua',
     'server/*.lua',
     'server/events/*.lua',
+    'server/commands/*.lua',
 }
 
 ui_page 'ui/dist/index.html'

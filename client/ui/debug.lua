@@ -48,6 +48,13 @@ function DGCORE.Client.UI.Debug.Hide()
     _sendNuiMessage("Hide")
 end
 
+function DGCORE.Client.UI.Debug.All()
+    DGCORE.Client.UI.Debug.Config()
+    DGCORE.Client.UI.Debug.User()
+    DGCORE.Client.UI.Debug.Users()
+    DGCORE.Client.UI.Debug.Items()
+end
+
 --- Sends the server configuration to the UI.
 function DGCORE.Client.UI.Debug.Config()
     local config = DGCORE.Config.Server
@@ -85,3 +92,10 @@ end
 function DGCORE.Client.UI.Debug.Items()
     _transformAndSendData("Items", DGCORE.Cache.Items)
 end
+
+RegisterNUICallback("DGCORE:Client:UI:Debug:Refresh", function (_, cb)
+    DGCORE.Client.Sync.All()
+    Citizen.Wait(10)
+    DGCORE.Client.UI.Debug.All()
+    cb({})
+end)
