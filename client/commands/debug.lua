@@ -1,0 +1,29 @@
+RegisterCommand(DGCORE.Commands.Client.Debug.Show, function (_, _, _)
+    DGCORE.Client.UI.Debug.Config()
+    DGCORE.Client.UI.Debug.User()
+    DGCORE.Client.UI.Debug.Users()
+    DGCORE.Client.UI.Debug.Items()
+    Citizen.Wait(10)
+    SetNuiFocus(true, true)
+    DGCORE.Client.UI.Debug.Show()
+end)
+
+RegisterCommand(DGCORE.Commands.Client.Debug.Hide, function (_, _, _)
+    DGCORE.Client.UI.Debug.Hide()
+end)
+
+RegisterCommand(DGCORE.Commands.Client.Debug.Config, function (_, _, _)
+    DGCORE.Client.UI.Debug.Config()
+end)
+
+RegisterCommand(DGCORE.Commands.Client.Debug.User, function (_, _, _)
+    DGCORE.Client.UI.Debug.User()
+end)
+
+RegisterCommand(DGCORE.Commands.Client.Debug.Users, function (_, _, _)
+    DGCORE.Client.UI.Debug.Users()
+end)
+
+RegisterCommand(DGCORE.Commands.Client.Debug.Items, function (_, _, _)
+    DGCORE.Client.UI.Debug.Items()
+end)
